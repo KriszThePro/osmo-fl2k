@@ -37,7 +37,11 @@
 #include <windows.h>
 #include <io.h>
 #include <fcntl.h>
+#ifdef __MINGW32__
+#include <getopt.h>
+#else
 #include "getopt/getopt.h"
+#endif
 #endif
 
 #include <math.h>

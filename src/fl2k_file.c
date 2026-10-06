@@ -33,7 +33,11 @@
 #include <windows.h>
 #include <io.h>
 #include <fcntl.h>
+#ifdef __MINGW32__
+#include <getopt.h>
+#else
 #include "getopt/getopt.h"
+#endif
 #define sleep_ms(ms)	Sleep(ms)
 #endif
 

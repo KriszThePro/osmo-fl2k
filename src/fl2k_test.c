@@ -44,7 +44,11 @@
 #define sleep_ms(ms)	usleep(ms*1000)
 #else
 #include <windows.h>
+#ifdef __MINGW32__
+#include <getopt.h>
+#else
 #include "getopt/getopt.h"
+#endif
 #define sleep_ms(ms)	Sleep(ms)
 #endif
 
